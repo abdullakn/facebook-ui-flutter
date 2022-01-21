@@ -1,3 +1,4 @@
+import 'package:facebook_home/sections/header_button_Section.dart';
 import 'package:facebook_home/sections/status_section.dart';
 import 'package:flutter/material.dart';
 import './widgets/app_bar_button.dart';
@@ -19,14 +20,26 @@ class Home extends StatelessWidget {
                 color: Colors.blue, fontSize: 26, fontWeight: FontWeight.bold),
           ),
           actions: [
-            AppBarButton(buttonIcon: Icons.search,buttonAction: (){print("search clicked");},),
-            AppBarButton(buttonIcon: Icons.chat,buttonAction: (){print("chat clicked");},),
-           
+            AppBarButton(
+              buttonIcon: Icons.search,
+              buttonAction: () {
+                print("search clicked");
+              },
+            ),
+            AppBarButton(
+              buttonIcon: Icons.chat,
+              buttonAction: () {
+                print("chat clicked");
+              },
+            ),
           ],
         ),
         body: ListView(
           children: [
-            StatusSection()
+            StatusSection(),
+            Divider(thickness: 1, color: Colors.grey[300]),
+            HeaderButtonSection(),
+            Divider(thickness: 10, color: Colors.grey[300]),
           ],
         ),
       ),
