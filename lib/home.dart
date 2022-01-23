@@ -1,6 +1,10 @@
+import 'package:facebook_home/assets.dart';
 import 'package:facebook_home/sections/header_button_Section.dart';
 import 'package:facebook_home/sections/room_section.dart';
 import 'package:facebook_home/sections/status_section.dart';
+import 'package:facebook_home/sections/story_section.dart';
+import 'package:facebook_home/widgets/avatar.dart';
+import 'package:facebook_home/widgets/post_card.dart';
 import 'package:flutter/material.dart';
 import './widgets/app_bar_button.dart';
 // import './'
@@ -46,6 +50,9 @@ class Home extends StatelessWidget {
             thickDivider,
             RoomSection(),
             thickDivider,
+            StorySection(),
+            thickDivider,
+            PostCard(avatar: dulqar,name: "Mammooty",publish_time: "5h",postImage: reus,postTitle: "Happy XMAS",accountVerification: true,)
           ],
         ),
       ),

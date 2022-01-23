@@ -9,8 +9,9 @@ class AppBarButton extends StatelessWidget {
 
   final IconData? buttonIcon;
   final void Function()? buttonAction;
+  final Color? IconColor;
 
-  AppBarButton({this.buttonIcon,this.buttonAction,});
+  AppBarButton({this.buttonIcon,this.buttonAction,this.IconColor=Colors.black});
 
 
 
@@ -21,7 +22,7 @@ class AppBarButton extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.grey[300], shape: BoxShape.circle),
               child: IconButton(
-                icon: Icon(buttonIcon,color: Colors.black,size: 25,),
+                icon: Icon(buttonIcon,color:IconColor,size: 25,),
                 onPressed: buttonAction,
               ),
             );
